@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3>栏目管理<br></h3>   
+        <h3>产品管理<br></h3>   
     </div>
 </template>
 <script>
