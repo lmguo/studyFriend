@@ -122,19 +122,19 @@ export const constantRoutes = [
         meta: { title: '评论管理', icon: 'form' }
       }
     ]
-  },
-  {
+  },{
     path: '/address',
     component: Layout,
     children: [
       {
         path: 'address',
-        name: 'addressList',
+        name: 'commentList',
         component: () => import('@/pages/address/list'),
         meta: { title: '地址管理', icon: 'form' }
       }
     ]
   },
+  
 
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
