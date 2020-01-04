@@ -35,16 +35,10 @@
          width="60%">
          测试{{form}}
          <el-form :model="form" label-width="80px">
-             <el-form-item label="订单编号">
-            <el-input  v-model="form.id"></el-input>
-             </el-form-item>
-             <el-form-item label="总价">
-                 <el-input v-model="form.total"></el-input>
-             </el-form-item>
              <el-form-item label="顾客id">
             <el-input  v-model="form.customerId"></el-input>
              </el-form-item>
-             <el-form-item label="顾客id">
+             <el-form-item label="服务地址id">
             <el-input  v-model="form.addressId"></el-input>
              </el-form-item>
              </el-form>
