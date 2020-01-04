@@ -1,52 +1,7 @@
 <template>
-   <div>
-       <h3>产品管理<br></h3>
-        <el-button type="primary" @click="toAddHandler" size="small" >添加</el-button>
-        <el-button type="danger" size="small">批量删除</el-button>
-        
-        <el-table ref="multipleTable" :data="product" tooltip-effect="dark" stripe>
-            <el-table-column type="selection"></el-table-column>
-            <el-table-column prop="id" label="编号" fixed="left">
-                <!-- <template slot-scope="scope">{{ scope.row.date }}</template> -->
-            </el-table-column>
-            <el-table-column prop="name" label="产品名称" fixed="left"></el-table-column>
-            <el-table-column prop="price" label="价格" show-overflow-tooltip></el-table-column>
-            <el-table-column prop="description" label="描述" width="240" show-overflow-tooltip></el-table-column>
-            <el-table-column prop="categoryId" label="所属产品" width="240" show-overflow-tooltip></el-table-column>
-            <el-table-column label="操作" show-overflow-tooltip>
-                <template v-slot="slot">
-                    <i @click="upDataHandler(slot.row)" class="el-icon-edit-outline" ></i>
-                    <i @click="deleteHandler(slot.row.id)" class="el-icon-delete" ></i>
-                    <!-- <el-button >详情</el-button> -->
-                </template>
-            </el-table-column>
-        </el-table>
-         <el-dialog
-            title="添加产品"
-            :visible.sync="visible"
-            width="60%">
-             <el-form :model="ruleform" :rules="rules" ref="ruleform" label-width="80px">
-                 <el-form-item prop="id" label="编号">
-                    <el-input v-model="ruleform.id"></el-input>
-                </el-form-item>
-                <el-form-item prop="name" label="产品名称">
-                    <el-input v-model="ruleform.name"></el-input>
-                </el-form-item>
-                <el-form-item prop="price" label="价格">
-                    <el-input v-model="ruleform.price"></el-input>
-                </el-form-item><el-form-item prop="description" label="描述">
-                    <el-input v-model="ruleform.description"></el-input>
-                </el-form-item><el-form-item prop="categoryId" label="所属产品">
-                    <el-input v-model="ruleform.categoryId"></el-input>
-                </el-form-item>
-                
-            </el-form>
-            <span slot="footer" class="dialog-footer">
-                <el-button @click="closeModelHandler">取 消</el-button>
-                <el-button type="primary" @click="submitHandler('ruleform')">确 定</el-button>
-            </span>
-         </el-dialog>
-   </div>
+    <div>
+        <h3>产品管理<br></h3>   
+    </div>
 </template>
 <script>
 import request from '@/utils/request'
