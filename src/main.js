@@ -34,7 +34,12 @@ Vue.use(ElementUI, { locale })
 // Vue.use(ElementUI)
 
 Vue.config.productionTip = false
-
+router.beforeEach((to,from,next)=>{
+  if(to.meta.title){
+    document.title = to.meta.title+"-家政服务平台"
+  }
+  next()
+})
 new Vue({
   el: '#app',
   router,
