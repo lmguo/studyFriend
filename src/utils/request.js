@@ -30,7 +30,7 @@ service.interceptors.request.use(
   }
 )
 
-// response interceptor
+// 返回内容拦截器
 service.interceptors.response.use(
   /**
    * If you want to get http information such as headers or status
@@ -70,6 +70,7 @@ service.interceptors.response.use(
     // } else {
       return res
     
+    return res;
   },
   error => {
     console.log('err' + error) // for debug

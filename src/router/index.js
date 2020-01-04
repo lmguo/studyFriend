@@ -65,13 +65,14 @@ export const constantRoutes = [
         meta: { title: '顾客管理', icon: 'form' }
       }
     ]
-  },  {
-    path: '/form',
+  },  
+  {
+    path: '/employee',
     component: Layout,
     children: [
       {
-        path: 'index',
-        name: 'Form',
+        path: 'employee',
+        name: 'employeeList',
         component: () => import('@/pages/employee/list'),
         meta: { title: '员工管理', icon: 'form' }
       }
@@ -85,26 +86,52 @@ export const constantRoutes = [
     meta: { title: '系统配置', icon: 'example' },
     children: [
       {
-        path: 'table',
-        name: 'Table',
+        path: 'program',
+        name: 'programList',
         component: () => import('@/pages/program/list'),
-        meta: { title: '项目管理', icon: 'table' }
+        meta: { title: '栏目管理', icon: 'table' }
       },
       {
-        path: 'tree',
-        name: 'Tree',
+        path: 'product',
+        name: 'productList',
         component: () => import('@/pages/product/list'),
         meta: { title: '产品管理', icon: 'tree' }
       }
     ]
   },
   {
-    path: 'external-link',
+    path: '/order',
     component: Layout,
     children: [
       {
-        path: 'https://panjiachen.github.io/vue-element-admin-site/#/',
-        meta: { title: '订单管理', icon: 'link' }
+        path: 'order',
+        name: 'orderList',
+        component: () => import('@/pages/order/list'),
+        meta: { title: '订单管理', icon: 'form' }
+      }
+    ]
+  },
+  {
+    path: '/address',
+    component: Layout,
+    children: [
+      {
+        path: 'address',
+        name: 'addressList',
+        component: () => import('@/pages/address/list'),
+        meta: { title: '地址管理', icon: 'form' }
+      }
+    ]
+  },
+  {
+    path: '/comment',
+    component: Layout,
+    children: [
+      {
+        path: 'comment',
+        name: 'commentList',
+        component: () => import('@/pages/comment/list'),
+        meta: { title: '评论管理', icon: 'form' }
       }
     ]
   },
