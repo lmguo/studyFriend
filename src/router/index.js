@@ -88,7 +88,7 @@ export const constantRoutes = [
         path: 'table',
         name: 'Table',
         component: () => import('@/pages/program/list'),
-        meta: { title: '项目管理', icon: 'table' }
+        meta: { title: '栏目管理', icon: 'table' }
       },
       {
         path: 'tree',
