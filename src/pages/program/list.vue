@@ -7,7 +7,7 @@
         <!-- /按钮 -->
      
         
-        <el-table :data="lanmu">    
+        <el-table :data="lanmu" style="font-size:12px">    
             <!-- //修改绑定数据 -->
             <!-- 动态绑定数据 -->
             <el-checkbox-group>

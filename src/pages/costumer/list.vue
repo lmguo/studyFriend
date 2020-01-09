@@ -1,11 +1,11 @@
 <template>
     <div>
         <!--按钮-->
-        <el-button type="success" size="small" @click="toAddHandler">添加</el-button>
+        <el-button type="primary" size="small" @click="toAddHandler">添加</el-button>
         <el-button type="danger" size="small">删除</el-button>
         <!--按钮结束-->
         <!--表格-->
-    <el-table :data="customers">
+    <el-table :data="customers" style="font-size:12px">
         <el-table-column type="selection"></el-table-column>
         <el-table-column prop="id" label="编号"></el-table-column>
         <el-table-column prop="realname" label="姓名"></el-table-column>

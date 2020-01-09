@@ -1,8 +1,6 @@
 <template>
     <div>
-        <el-button type="sign"  @click="toAddHandler">添加</el-button>
-        <el-button type="danger">删除</el-button>
-        <el-table :data="comment">
+        <el-table :data="comment" style="font-size:12px">
             <el-table-column prop="id" label="编号"></el-table-column>
             <el-table-column prop="content" label="内容"></el-table-column>
             <el-table-column prop="commentTime" label="评论时间"></el-table-column>
@@ -141,17 +139,10 @@ export default {
     // this为当前vue实例对象
     // vue实例创建完毕 
     this.loadData()
-
     }
     }
 
 </script>>
 
 <style scoped>
-
 </style>>
-
-
-<!-- 要有package.json  运行在当前项目根目录下
-methods
-data-->

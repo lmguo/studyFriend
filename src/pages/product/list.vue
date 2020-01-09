@@ -3,7 +3,7 @@
         <el-button type="primary" @click="toAddHandler" size="small">添加</el-button>
         <el-button type="danger" size="small">批量删除</el-button>
 
-        <el-table ref="multipleTable" :data="product" tooltip-effect="dark" stripe size="small" height="1000px">
+        <el-table ref="multipleTable" :data="product" tooltip-effect="dark" stripe size="small" height="1000px" style="font-size:12px">
             <el-table-column type="selection"></el-table-column>
             <el-table-column prop="id" label="编号" width="200">
                 <!-- <template slot-scope="scope">{{ scope.row.date }}</template> -->
@@ -41,9 +41,8 @@
                     <el-select v-model="value" placeholder="请选择">
                         <el-option
                             v-for="item in options"
-                            :key="item.value"
-                            :label="item.label"
-                            :value="item.value">
+                            :key="item.id"
+                            :value="item.name">
                         </el-option>
                     </el-select>
                 </el-form-item>
@@ -61,23 +60,7 @@ import querystring from 'querystring'
 export default {
     data(){
         return{
-            options: [{
-                value: '选项1',
-                label: '9139'
-                }, {
-                value: '选项2',
-                label: '9202'
-                }, {
-                value: '选项3',
-                label: '9357'
-                }, {
-                value: '选项4',
-                label: '9358'
-                }, {
-                value: '选项5',
-                label: '9392'
-                }],
-                value: '',
+            options: [],
             product:[],
             ruleform:{},
             visible:false,
@@ -99,6 +82,12 @@ export default {
             let url = "http://localhost:6677/product/findAll"
             request.get(url).then((response)=>{
                 this.product = response.data;
+            })
+        },
+        categoryLoad(){
+            let url = "http://localhost:6677/category/findAll";
+            request.get(url).then((response)=>{
+                this.options = response.data
             })
         },
         upDataHandler(row){
@@ -158,7 +147,8 @@ export default {
         }
     },
     created(){
-        this.loadData()
+        this.loadData();
+        this.categoryLoad()
     },
 }
 </script>

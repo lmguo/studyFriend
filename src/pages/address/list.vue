@@ -4,7 +4,7 @@
         <el-button size="small" type="primary" @click="toAddHandler">添加</el-button>
         <el-button size="small" type="danger">批量删除</el-button>
                 
-        <el-table :data="address">    
+        <el-table :data="address" style="font-size:12px">    
             <!-- //修改绑定数据 -->
             <!-- 动态绑定数据 -->
             <el-table-column  fixed="left" type="selection" >

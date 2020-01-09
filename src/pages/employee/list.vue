@@ -1,9 +1,9 @@
 <template>
     <div>
-        <el-button type="sign"  @click="toAddHandler">添加</el-button>
-        <el-button type="danger">批量删除</el-button>
+        <el-button type="primary"  @click="toAddHandler" size="small">添加</el-button>
+        <el-button type="danger" size="small">批量删除</el-button>
 
-        <el-table :data="employees">
+        <el-table :data="employees" style="font-size:12px">
             <el-table-column  fixed="left" type="selection" ></el-table-column>
             <el-table-column fixed="left" prop="id" label="编号"></el-table-column>
             <el-table-column fixed="left" prop="username" label="用户名"></el-table-column>
